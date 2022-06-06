@@ -26,19 +26,10 @@ public class CatTest {
     }
 
     @Test
-    public void getFoodPositiveResult(){
-        try {
-            Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
-        } catch (Exception exception) {
-            System.out.println(exception);
-        }
+    public void getFoodPositiveResult() throws Exception {
+        Mockito.when(feline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         Cat cat = new Cat(feline);
-        List<String> actual = null;
-        try {
-            actual = cat.getFood();
-        } catch (Exception exception) {
-            System.out.println(exception);
-        }
+        List<String> actual = cat.getFood();
         List<String> expected = List.of("Животные", "Птицы", "Рыба");
         assertEquals(expected,actual);
     }

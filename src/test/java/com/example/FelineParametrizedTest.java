@@ -7,6 +7,7 @@ import org.junit.runners.Parameterized;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
+
 public class FelineParametrizedTest {
     private final int KITTENS_COUNT;
     private final int EXPECTED;

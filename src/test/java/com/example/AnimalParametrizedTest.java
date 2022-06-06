@@ -28,13 +28,9 @@ public class AnimalParametrizedTest {
     }
 
     @Test
-    public void getFoodPositiveResult(){
+    public void getFoodPositiveResult() throws Exception {
         Animal animal = new Animal();
-        try {
-            List<String> actual = animal.getFood(ANIMAL_KIND);
-            assertEquals(EXPECTED,actual);
-        } catch (Exception exception) {
-            System.out.println(exception);
-        }
+        List<String> actual = animal.getFood(ANIMAL_KIND);
+        assertEquals(EXPECTED,actual);
     }
 }

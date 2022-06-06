@@ -2,8 +2,6 @@ package com.example;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.util.List;
@@ -31,13 +29,8 @@ public class FelineTest {
     }
 
     @Test
-    public void eatMeatPositiveResult(){
-        List<String> actual = null;
-        try {
-            actual = feline.eatMeat();
-        } catch (Exception exception) {
-            System.out.println(exception);
-        }
+    public void eatMeatPositiveResult() throws Exception {
+        List<String> actual = feline.eatMeat();
         List<String> expected = List.of("Животные", "Птицы", "Рыба");
         assertEquals(expected,actual);
     }

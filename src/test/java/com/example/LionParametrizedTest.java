@@ -26,16 +26,10 @@ public class LionParametrizedTest {
     }
 
     @Test
-    public void hasManePositiveResult(){
+    public void hasManePositiveResult() throws Exception {
         Feline feline = new Feline();
-        Feline felineBreeding = new Feline();
-        try {
-            Lion lion = new Lion (LION_SEX, feline, felineBreeding);
-            boolean actual = lion.doesHaveMane();
-            assertEquals(EXPECTED,actual);
-        } catch (Exception exception) {
-            System.out.println(exception);
-        }
+        Lion lion = new Lion (LION_SEX, feline);
+        boolean actual = lion.doesHaveMane();
+        assertEquals(EXPECTED,actual);
     }
-
 }
